@@ -13,24 +13,24 @@ function App() {
   return (
     <div className="App container-fluid">
       <Suspense fallback={<div>Loading...</div>}>
-
         <BrowserRouter>
           <div className="row"> <Header /></div>
-
-          <Switch>
-            <Redirect exact from="/" to="/products"></Redirect>
-            <Route path="/categories" component={Category} />
-            <Route path="/products" >
-              <Product />
-            </Route>
-          </Switch>
-
+          <div className="row">
+            <div className="col">
+              <Switch>
+                <Redirect exact from="/" to="/products"></Redirect>
+                <Route path="/categories" component={Category} />
+                <Route path="/products" >
+                  <Product />
+                </Route>
+              </Switch>
+            </div>
+          </div>
           <div className="row"> <Footer /></div>
-
         </BrowserRouter>
       </Suspense>
 
-    </div>
+    </div >
   );
 }
 
