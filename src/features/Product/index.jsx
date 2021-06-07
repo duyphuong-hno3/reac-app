@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
 const AddProduct = React.lazy(() => import('./pages/AddProduct'));
-const ListProducts = React.lazy(() => import('./containers/ProductList'));
+const ListProducts = React.lazy(() => import('../../redux/features/Product/containers/ProductList'));
 Product.propTypes = {
 
 };
